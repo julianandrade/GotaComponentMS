@@ -1,0 +1,82 @@
+FORMAT: 1A
+HOST: https://gotacomponentapi.docs.apiary.io/#
+
+# GOTA Component MS API
+The GOTA Component API description part of the TOMAS training.
+
+## Component  [/api/v1/component{id}]
+A component contains some information...
+
++ Parameters
+    + id (string)
+
+        The ID of the desired component.
+
++ Attributes (Component Base)
+    + id: 250FF (string, required)
+    + created: 1415203908 (number) - Time stamp
+
+
+### Get Component [GET]
+Retrives the Component with the given ID.
+
++ Response 200 (application/json)
+    + Attributes (Component)
+
+### Edit Component [PUT]
+Edit a Component.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+### Disable Component  [POST]
+Disable a Component.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+### Delete Component [DELETE]
+Deletes a Component.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+
+## Components [/api/v1/components{?limit}]
+
++ Attributes (array[Component])
+
+### List all Components [GET]
+Returns a list of your Components.
+
++ Parameters
+    + limit (number, optional)
+
+        A limit on the number of objects to be returned. Limit can range
+        between 1 and XXX items.
+
+        + Default: `10`
+
++ Response 200 (application/json)
+    + Attributes (Components)
+
+### Create a Component [POST]
+Creates a new Component.
+
++ Attributes (Component Base)
+
++ Request (application/json)
+
++ Response 200 (application/json)
+    + Attributes (Component)
+
+# Data Structures
+
+## Component Base (object)
+
+## Response Metadata (object)
+- error (boolean, required)
+- message: `Outcome of transaction` (string, optional)
