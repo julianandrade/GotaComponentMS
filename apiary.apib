@@ -13,9 +13,9 @@ A component contains some information...
         The ID of the desired component.
 
 + Attributes (Component Base)
-    + id: 250FF (string, required)
-    + created: 1415203908 (number) - Time stamp
-
+    + id: `Component Identifier` (string, required)
+    + created_date: `Component date creation` (string, optional)
+    + name: `Component Name` (string, required)
 
 ### Get Component [GET]
 Retrives the Component with the given ID.
@@ -24,21 +24,21 @@ Retrives the Component with the given ID.
     + Attributes (Component)
 
 ### Edit Component [PUT]
-Edit a Component.
+Edit a specific Component.
 
 + Request (application/json)
 
 + Response 200 (application/json)
 
 ### Disable Component  [POST]
-Disable a Component.
+Disables a specific Component.
 
 + Request (application/json)
 
 + Response 200 (application/json)
 
 ### Delete Component [DELETE]
-Deletes a Component.
+Deletes a specific Component.
 
 + Request (application/json)
 
@@ -76,7 +76,10 @@ Creates a new Component.
 # Data Structures
 
 ## Component Base (object)
++ description: `Component Description` (string, optional)
++ owner: `Component Owner` (string, optional)
++ default_assignee: `Component Default Assignee` (string, optional)
 
 ## Response Metadata (object)
-- error (boolean, required)
+D- error (boolean, required)
 - message: `Outcome of transaction` (string, optional)
