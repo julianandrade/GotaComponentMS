@@ -2,10 +2,17 @@ FORMAT: 1A
 HOST: https://gotacomponentapi.docs.apiary.io/#
 
 # GOTA Component MS API
-The GOTA Component API description part of the TOMAS training.
+The GOTA `Component` Microservice API description part of the TOMAS training.
+
+`Components` are building blocks which you can use to break down projects into smaller parts.
+
+A part of the `Component` data structure is shared between the `Component` definition itself and the `Create a Component` action, it was separated into a `Component Base` data structure in the `Data Structures` API Blueprint Section. Doing so enables us to reuse it as a base-type of other attribute definitions.
+
+## GOTA System API Blueprint References
++ [Example: References to other Microservices]()
 
 ## Component  [/api/v1/component{id}]
-A component contains some information...
+A component contains information such as ID, Created Date, Name, Description, Owner and Default Assignee.
 
 + Parameters
     + id (string)
@@ -20,27 +27,46 @@ A component contains some information...
 ### Get Component [GET]
 Retrives the Component with the given ID.
 
++ Request (text/plain)
+
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
+
 + Response 200 (application/json)
     + Attributes (Component)
 
 ### Edit Component [PUT]
-Edit a specific Component.
+Edit a Component with the given ID.
 
-+ Request (application/json)
++ Request (text/plain)
+
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
 
 + Response 200 (application/json)
+    + Attributes (Component)
 
 ### Disable Component  [POST]
-Disables a specific Component.
+Disable a Component with the given ID.
 
-+ Request (application/json)
++ Request (text/plain)
+
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
 
 + Response 200 (application/json)
 
 ### Delete Component [DELETE]
-Deletes a specific Component.
+Delete a Component with the given ID.
 
-+ Request (application/json)
++ Request (text/plain)
+
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
 
 + Response 200 (application/json)
 
@@ -60,6 +86,12 @@ Returns a list of your Components.
 
         + Default: `10`
 
++ Request (text/plain)
+
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
+
 + Response 200 (application/json)
     + Attributes (Components)
 
@@ -68,9 +100,13 @@ Creates a new Component.
 
 + Attributes (Component Base)
 
-+ Request (application/json)
++ Request (text/plain)
 
-+ Response 200 (application/json)
+    + Headers
+
+            api-key: ac108161-d3a5-427d-b814-ff977728395b
+
++ Response 201 (application/json)
     + Attributes (Component)
 
 # Data Structures
@@ -81,5 +117,5 @@ Creates a new Component.
 + default_assignee: `Component Default Assignee` (string, optional)
 
 ## Response Metadata (object)
-D- error (boolean, required)
+- error (boolean, required)
 - message: `Outcome of transaction` (string, optional)
