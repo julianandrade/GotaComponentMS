@@ -27,11 +27,7 @@ A component contains information such as ID, Created Date, Name, Description, Ow
 ### Get Component [GET]
 Retrives the Component with the given ID.
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 200 (application/json)
     + Attributes (Component)
@@ -39,11 +35,7 @@ Retrives the Component with the given ID.
 ### Edit Component [PUT]
 Edit a Component with the given ID.
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 200 (application/json)
     + Attributes (Component)
@@ -51,22 +43,14 @@ Edit a Component with the given ID.
 ### Disable Component  [POST]
 Disable a Component with the given ID.
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 200 (application/json)
 
 ### Delete Component [DELETE]
 Delete a Component with the given ID.
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 200 (application/json)
 
@@ -86,11 +70,7 @@ Returns a list of your Components.
 
         + Default: `10`
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 200 (application/json)
     + Attributes (Components)
@@ -100,11 +80,7 @@ Creates a new Component.
 
 + Attributes (Component Base)
 
-+ Request (text/plain)
-
-    + Headers
-
-            api-key: ac108161-d3a5-427d-b814-ff977728395b
++ Request (application/json)
 
 + Response 201 (application/json)
     + Attributes (Component)
@@ -115,7 +91,3 @@ Creates a new Component.
 + description: `Component Description` (string, optional)
 + owner: `Component Owner` (string, optional)
 + default_assignee: `Component Default Assignee` (string, optional)
-
-## Response Metadata (object)
-- error (boolean, required)
-- message: `Outcome of transaction` (string, optional)
